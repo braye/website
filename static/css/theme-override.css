@@ -1,0 +1,21 @@
+footer { font-size: 90%; }
+@media (prefers-color-scheme: dark) {
+    a {
+      color: #d88a8a;
+    }
+
+    header {
+      background: #393E41;
+      border-bottom: 2px dotted #d88a8a;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    a {
+      color: #c13d3d;
+    }
+
+    header {
+      background: #c13d3d;
+    }
+}
