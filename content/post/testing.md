@@ -7,9 +7,9 @@ date: 2022-01-10T22:11:34-08:00
 
 This is a hugo site that I threw together in ten minutes. This is a test post on said hugo site that I threw together in ten minutes.
 
-I'll probably use this website to write about linux and stuff. I find nowadays that writing things down tends to help me organize my thoughts. It's also giving me the warm fuzzy feelings inside when I recognize that I'm publishing content on the internet without the help of anyone but my ISP. This is old-school hosting, from my house on an old computer. No runtimes, compute platforms, etc. in the way. Just me and the computer.
+I'll probably use this website to write about linux and stuff. I find nowadays that writing things down tends to help me organize my thoughts. It's also giving me the warm fuzzy feelings inside when I recognize that I'm publishing content on the internet without the help of anyone but my ISP. Just HTML and CSS, from my house on an old computer. No runtimes, compute platforms, etc. in the way.
 
-Terry A Davis's analogy about the OS as a motorcycle comes to mind. What a crazy, gifted man who just couldn't get the help he needed.
+(yes i know hugo needs the go runtime, shhhhh.)
 
 # Hey, who the hell starts a blog in 2021 anyway?
 
