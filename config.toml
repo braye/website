@@ -40,5 +40,5 @@ url = "/index.xml"
 
 [params]
 custom_css = ["css/theme-override.css"]
-description = "A simple, minimal blog for those who love text."
+description = "Writings and tidbits by snepi"
 footer = "Theme ~~stolen~~ adapted from [goodroot on github](https://github.com/goodroot/hugo-classic)"
