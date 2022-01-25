@@ -55,6 +55,10 @@ However, by this point it had been close to a year since the initial purchase of
 If software was off the table...it was time for hardware.
 
  -snepi
+ 
+---
+
+Parts: [One](/post/2022/01/21/the-rtx-3090-fe-or-how-i-learned-to-stop-worrying-and-love-tcase/) | Two | Three 
 
 [^1]: My parents weren't exactly thrilled with me printing out all those wiki articles.
 [^2]: I could be completely off-base on this timeframe; Please @ me if I got this wrong.
