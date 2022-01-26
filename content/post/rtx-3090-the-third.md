@@ -12,9 +12,11 @@ tags:
 
 ## Time to dig in!
 
-Let's get cracking on the hardware design of the RTX 3090 "Founder's Edition". 
+Let's get cracking on the hardware design of the RTX 3090 "Founder's Edition", and GPU cooler design in general.
 
-For the past couple generations, Nvidia has started putting a lot of design work into the cards that they OEM. Until somewhat recently, their cards sported the bog-standard blower cooling designs we'd been dealing with since the 8800GT days. By 2018, that design was getting *very* long in the tooth. Their first departure from this, the RTX 20 series FE cards, weren't necessarily outstanding but they represented a large upgrade over the old design. They were dual-fan, transverse-exit cards which utilized a large vapor chamber to spread heat across the heatsink. Not the most efficient method, but one which strikes a good compromise between low cost and thermals. AMD also recently used a similar design on their first-party Radeon 6000 series cards to fairly decent effect.
+Until recently, Nvidia's first-party cards sported a "blower" design, using a paddle-wheel style fan to push air across a fin stack and exhaust it out the rear of the case. This seems to have debuted with the release of the 8800 series in 2006, and remained as their chosen thermal solution for over a decade. It was never particularly good, to be honest, and by even the early 2010s this design was beginning to show its weaknesses in the face of climbing TDPs[^1]. 
+
+The release of the RTX 2000 series in 2018 showed Nvidia's first attempts to move on from this tired design. The thermal solution included on "Founders Edition" cards, as they were now branded, weren't outstanding but still represented a large upgrade over the old design. They were dual-fan, transverse-exit cards which utilized a large vapor chamber to spread heat across the heatsink. Two fans would then push air down onto the heatsink, and it would then exit the open sides of the card into the computer case. Large vapor chambers aren't the most efficient method of moving heat over a long distance, but they strike a good compromise between low cost and thermal performance. AMD recently used a similar design on their first-party Radeon 6800 series cards to fairly decent effect.
 
 <img
   src="/images/2080-fe-vapor-chamber.jpg"
@@ -22,7 +24,7 @@ For the past couple generations, Nvidia has started putting a lot of design work
   
 > An RTX 2080 FE, minus the fan shroud.
 
-The RTX 30 series, on the other hand, was a radical departure from the previous 20 series design. Faced with climbing TDPs[^1] and limited (physical) space to dissipate them, Nvidia decided to create a frankenstein-like marriage of the "blower" concept and a more recent aftermarket trend known as "blow-through" coolers. Maybe it's for the best if I let Nvidia's marketing material explain:
+The RTX 3000 series, on the other hand, debuted with a radical departure from the previous 20 series design. Nvidia's election to push TDPs even higher, and the limited space in which to dissipate that heat, led them to create a frankenstein-like marriage of the old "blower" concept and a more recent aftermarket trend known as "blow-through" coolers. Maybe it's for the best if I let Nvidia's marketing material explain:
 
 <img
   src="/images/rtx-30-series-flow.jpg"
@@ -30,9 +32,11 @@ The RTX 30 series, on the other hand, was a radical departure from the previous 
   
 The case-forward half of the card has a fan that's embedded on the "top" side of the heatsink, and spins to pull air *through* the heatpipes and fins below it. The case-rearward part of the card has a fan on the "bottom" of the heatsink, sucking up air and expelling it out the rear of the case through a stack of fins.
  
-This design is... certainly unique, and it fits the Apple-like direction which Nvidia leadership seem determined to drag their company. For extracting heat from the GPU core, the heatsink uses a coldplate mounted to the die, which sinks into heat-pipes, which then have a fin structure attached to them. This has been popular with third-party card retailers for years, and is proven to be a high-performing, albeit more expensive option when it comes to heat dissipation. The rest of the components on the front side of the board (power ICs, RAM ICs) sink into a vapor chamber, which is seemingly attached to a couple flat heat-pipes which attach to the bottom of the fin-stack at the case-rear of the card.
+This design is... certainly unique, and it fits the Apple-like direction which Nvidia leadership seem determined to drag their company. For extracting heat from the GPU core, the there is a (presumably) copper coldplate mounted to the die, connected to several heat-pipes, which in turn have a fin structure attached to them. This has been popular with third-party card retailers for years, and is proven to be a high-performing, albeit more expensive option when it comes to heat dissipation. The rest of the components on the front side of the board (power ICs, RAM ICs) sink into a vapor chamber, which is seemingly attached to a couple flat heat-pipes which attach to the bottom of the fin-stack at the case-rear of the card.
 
-I'm not exactly convinced that this is better than what's available from other manufacturers such as ASUS, EVGA, and Gigabyte. Admittedly, I haven't even done a Fermi estimate of how much heatsink area is being actively cooled, but my eyes tell me that it doesn't look great. The entire middle of the card is a dead-zone, since the fans are at the extremeties, and you don't even get the benefit of convection on the "wing" fin stacks as the tops are obstructed by the PCB and a solid metal vanity cover. 
+I'm not exactly convinced that this is better than what's available from other manufacturers such as ASUS, EVGA, and Gigabyte. Admittedly, I haven't even done a Fermi estimate of how much heatsink area is being actively cooled, but my eyes tell me that it doesn't look great. The entire middle of the card is a dead-zone, since the fans are at the extremeties, and you don't even get the benefit of convection on the "wing" fin stacks as the tops are obstructed by the PCB and a solid metal vanity cover.
+
+<sub>(It looks dead sexy, though.)</sub>
 
 The awkward implementation of a "blow-through" design also necessitates putting power delivery significantly closer to the other heat-generating parts of the PCB. Here's a picture of a 3090 FE PCB - notice the borderline comical level of component density.
 
@@ -46,7 +50,9 @@ Keep in mind that all of those power stages, all those RAM ICs, the voltage mana
 - A connection between the vapor chamber and a flat(?)[^3] heatpipe.
 - Another connection between heatpipe and fin stack. (from what I can see, only one side of the heat pipe)
 
-This probably doesn't seem like a lot, and it's not unheard of for cards to do most of this stuff. But, like most engineering, it's more than the sum of its parts. The end result is that the cooler lacks sufficient dissipating power to keep the temperatures of all components under control. The problem isn't the power target, or the specifics of the cooler design, or the amount of RAM, or the type of RAM... It's all of these components together. It's like an airplane crash - it's a chain reaction of "this would have been fine, but.." scenarios. Each part contributes more or less equally to the end result.
+This probably doesn't seem like a lot, and it's not unheard of for cards to do most of this stuff. But, like most engineering, it's more than the sum of its parts. The end result is that the cooler lacks sufficient dissipating power to keep the temperatures of all components under control. This leads to a behavior wherein heat slowly soaks through the PCB (the layers are copper, after all!) and temperatures slowly increase to borderline out-of-spec levels.
+
+The problem isn't the power target, or the specifics of the cooler design, or the amount of RAM, or the type of RAM... It's all of these components together. It's like an airplane crash - it's a chain reaction of "this would have been fine, but.." scenarios. Each part contributes more or less equally to the end result.
 
 ## Knowledge is Power
 
@@ -60,9 +66,9 @@ The first real solution I explored was just sticking some heatsinks on the back 
   src="/images/3090-no-space.jpg"
   alt="A GeForce RTX 3090 Founder's Edition PCB">
   
-Oops. Turns out I forgot that there was approximately half a millimeter between the back of my GPU, and the heatsink-fan assembly for my CPU. That's gonna be have to be marked down as a failure to launch. It's worth noting that Many People On The Internet claim to have success with this method - although every time I found a photo from said person, they were running a closed loop liquid cooler for their CPU. That's actually where my mind went next - it would have been a decent upgrade in cooling capacity for my CPU, but I wasn't exactly running into limitations there. Ultimately, it would have mostly been wasted money.
+Oops. Turns out I forgot that there was approximately half a millimeter between the back of my GPU, and the heatsink-fan assembly for my CPU. That's gonna be a no-go. It's worth noting that Many People On The Internet claim to have success with this method - although every time I found a photo from said person, they were running a closed-loop liquid cooler for their CPU. That's actually where my mind went next - it would have been a decent upgrade in cooling capacity for my CPU, but I wasn't exactly running into limitations there. Ultimately, it would have mostly been wasted money.
 
-If I couldn't add more dissipation to the card via additional surface area, I thought, maybe I could improve the thermal interface. Some cursory research revealed that this - like undervolting - was already very common in the enthusiast community. People had reported lots of success, dropping memory T<sub>j</sub> temps by 10 degrees or more, putting them firmly in the "warm but tolerable" zone. This was the avenue I decided to head down.
+If I couldn't add more dissipation to the card via additional surface area, I thought, maybe I could improve the thermal interface. Some cursory research revealed that this - like undervolting - was already very common in the enthusiast community. People had reported lots of success, dropping memory T<sub>j</sub> temps by 10 degrees or more, putting them firmly in the "warm but tolerable" zone. This was the method I decided to pursue.
 
 ## Getting Goopy
 
@@ -145,7 +151,7 @@ Post-Mod:
   
 The card has *horrendous* coil whine, so it still sounds like a taser every time I run a heavy benchmark, but I can barely hear that noise once I have my headphones on.
 
-I hope this article helps someone out there in a similar situation. This *really* annoyed me, and fixing it was probably the most satisfying thing I've done in months. This area of PC building - thermal management - feels like it could use some love from the community; There aren't many good tools for managing things like fan profiles outside of the poorly-written Windows software that motherboard manufacturers ship or proprietary products like the Corsair Commander. Something to think about, I suppose.
+I hope this article helps anyone who finds themselves in a similar situation. This *really* annoyed me, and fixing it was probably the most satisfying thing I've done in months. This area of PC building - thermal management - feels like it could use some love from the community; There aren't many good tools for managing things like fan profiles outside of the poorly-written Windows software that motherboard manufacturers ship or proprietary products like the Corsair Commander. Something to think about, I suppose.
 
  -snepi
 
