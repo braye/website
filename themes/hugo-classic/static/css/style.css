@@ -170,7 +170,7 @@ img, iframe, video {
 }
 
 main {
-  hyphens: auto;
+  hyphens: none;
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
