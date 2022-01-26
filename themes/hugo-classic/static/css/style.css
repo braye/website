@@ -162,7 +162,8 @@ pre code { background: none; }
 
 /* Images, tables, misc. */
 img, iframe, video {
-  max-width: 100%;
+  border-radius: 10px;
+  max-width: 80%;
   height: auto;
   display: block;
   margin-left: auto;
@@ -171,7 +172,7 @@ img, iframe, video {
 
 main {
   hyphens: none;
-  max-width: 650px;
+  max-width: 850px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.7em;
