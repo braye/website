@@ -1,7 +1,13 @@
 ---
 title: "RTX 3090: Part Deux"
 date: 2022-01-23T20:24:52-08:00
-draft: false
+author: snepi
+categories:
+  - hardware
+  - graphics
+tags:
+  - 3090
+  - nvidia
 ---
 
 <img
@@ -58,7 +64,7 @@ If software was off the table...it was time for hardware.
  
 ---
 
-Parts: [One](/post/2022/01/21/the-rtx-3090-fe-or-how-i-learned-to-stop-worrying-and-love-tcase/) | Two | Three 
+Parts: [One](/post/2022/01/21/the-rtx-3090-fe-or-how-i-learned-to-stop-worrying-and-love-tcase/) | Two | [Three](/post/2022/01/24/rtx-3090-the-third/) 
 
 [^1]: My parents weren't exactly thrilled with me printing out all those wiki articles.
 [^2]: I could be completely off-base on this timeframe; Please @ me if I got this wrong.

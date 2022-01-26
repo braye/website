@@ -41,4 +41,4 @@ url = "/index.xml"
 [params]
 custom_css = ["css/theme-override.css"]
 description = "Writings and tidbits by snepi"
-footer = "Theme ~~stolen~~ adapted from [goodroot on github](https://github.com/goodroot/hugo-classic)"
+footer = "[find me on twitter](https://twitter.com/_nepneps) | Theme ~~stolen~~ adapted from [goodroot on github](https://github.com/goodroot/hugo-classic)"

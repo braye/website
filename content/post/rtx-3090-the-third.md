@@ -1,7 +1,13 @@
 ---
 title: "RTX 3090: the Third"
 date: 2022-01-24T17:42:46-08:00
-draft: false
+author: snepi
+categories:
+  - hardware
+  - graphics
+tags:
+  - 3090
+  - nvidia
 ---
 
 ## Time to dig in!
@@ -139,7 +145,7 @@ Post-Mod:
   
 The card has *horrendous* coil whine, so it still sounds like a taser every time I run a heavy benchmark, but I can barely hear that noise once I have my headphones on.
 
-I hope this article helps someone out there in a similar situation. This *really* annoyed me, and fixing it was probably the most satisfying thing I've done in months.
+I hope this article helps someone out there in a similar situation. This *really* annoyed me, and fixing it was probably the most satisfying thing I've done in months. This area of PC building - thermal management - feels like it could use some love from the community; There aren't many good tools for managing things like fan profiles outside of the poorly-written Windows software that motherboard manufacturers ship or proprietary products like the Corsair Commander. Something to think about, I suppose.
 
  -snepi
 
