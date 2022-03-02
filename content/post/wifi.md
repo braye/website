@@ -3,6 +3,9 @@ slug: wi-fi
 title: "Wi-Fi Sucks"
 date: 2022-03-01
 draft: false
+description: rambling about why wi-fi is a usability nightmare
+images: 
+  - /images/wetlands.jpg
 ---
 
 <img
