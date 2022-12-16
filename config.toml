@@ -40,5 +40,5 @@ url = "/index.xml"
 
 [params]
 custom_css = ["css/theme-override.css"]
-description = "Writings and tidbits by snepi"
-footer = "[find me on twitter](https://twitter.com/_snepi) | Theme ~~stolen~~ adapted from [goodroot on github](https://github.com/goodroot/hugo-classic)"
+description = "Writings and tidbits by nepi"
+footer = "[find me on the fediverse](https://fedi.snepi.space/nepi) | Theme ~~stolen~~ adapted from [goodroot on github](https://github.com/goodroot/hugo-classic)"
