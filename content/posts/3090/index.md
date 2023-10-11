@@ -1,7 +1,8 @@
 ---
 title: "The RTX 3090 FE or: how I learned to stop worrying and love Tcase"
 date: 2022-01-21T16:03:41-08:00
-author: snepi
+draft: false
+author: nepi
 categories:
   - hardware
   - graphics
@@ -10,7 +11,7 @@ tags:
   - nvidia
 description: breaking down the poor thermal design of the 3090 FE
 images:
-  - /images/3090-chonk.jpg
+  - 3090-chonk.jpg
 ---
 
 _Note: This was originally split across three separate blog posts as more stream-of-consciousness type posts. I've condensed the original posts into one, with some minor revisions._
