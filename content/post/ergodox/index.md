@@ -13,7 +13,7 @@ It shouldn't come as a surprise that I'm into mechanical keyboards in a big way.
 Fast-forward to the start of high school, and one of my friends picks up a little product called the Das Keyboard Model S. Using it was the first time in a long while that I had given keyboards a second thought! Sure, I knew about oddities like the Logitech G15, but generally I just thought of a keyboard as a commodity product. It was just something that you needed to operate the computer, and didn't warrant much thought beyond that.
 
 <img
-  src="/images/daskeyboard.jpg"
+  src="daskeyboard.jpg"
   alt="Side profile of a Das Keyboard">
   
 
@@ -23,7 +23,7 @@ This Das Keyboard, on the other hand... this was something worth getting excited
 I ended up picking up one of my own (a tough ask, being a broke high-school kid), and it completely changed my perception of what a keyboard could be. They were no longer just *a thing* that you used. They were their own aspect of computing that warranted deep inspection, a decision as important as any other piece of hardware which made up your computer. My interest really took off after college, as I got my first "real" job in software. Living at home, I had plenty of extra spending money (funny how that works!), and the most logical thing to spend it on was something that I used for hours and hours every day. After a year or so of trying new things every few months, I settled on a compact 75% keyboard by Vortex, the Race 3.
 
 <img
-  src="/images/race3.jpg"
+  src="race3.jpg"
   alt="Vortex Race 3">
   
 This keyboard met all my needs for a long time. From trying other form factors, I had learned that I had a pretty low tolerance for special modifiers, especially when commonly used keys (delete, arrow keys, F-keys) were hidden behind them. It usually meant I had to make some fairly uncomfortable hand movements, which I didn't want to be doing on a regular basis. The Race 3 also came with nice POM keycaps, with spherical indentations. I generally find this style to be more comfortable to use, as the indentation tends to guide your finger to the center of the key no matter where it lands initially. As an added bonus, the board was relatively affordable at $139.
@@ -39,7 +39,7 @@ In light of my wrist troubles, however, I started taking another look at the Erg
 ## The Keyboard
 
 <img
-  src="/images/ergodox-box.jpg"
+  src="ergodox-box.jpg"
   alt="Picture of the box of an Ergodox EZ keyboard">
  
 I'm aware that the Ergodox is open-source hardware, and buying the EZ could be construed as "cheating". Unfortunately, the reality is that by virtue of being both incredibly niche and being open-source, Ergodox keyboards practically have no economies of scale. Now, this isn't a problem exclusive to the Ergodox - basically every non-standard keyboard has this problem. What it means is that building one from a kit, perhaps the "kosher" way to approach a peripheral like the Ergodox, was a bit too rich for my blood. What if I end up hating it? Am I just supposed to accept throwing $350+ down the drain, just so I can say I did it "correctly"? The folks over at ZSA make that a bit easier to stomach with the EZ. While they *are* built to order, their successful indiegogo campaign and (apparent) continued success means that they manage to get the price down to a more managable level.
@@ -47,13 +47,13 @@ I'm aware that the Ergodox is open-source hardware, and buying the EZ could be c
 Besides that, ZSA's Ergodox EZ is a compelling package. It comes fully populated with your choice of Cherry branded keyswitches (including their silent series, which I chose), wonderful Signature Plastics DSA keycaps, and a proper case. I skipped all the bells and whistles for my Ergodox - I'm not really one for RGB backlighting or underglow. At the time I ordered my example, they were running a $20 discount as they tried to clear out the remaining stock of USB-Mini based keyboards, in anticipation of their switch to a USB-C connector. I didn't really mind - USB-Mini is perfectly acceptable in my view. All said, including shipping, the price came out to $250. Hard to stomach for a layman, but borderline bargain-bin for anyone that's looked into building a custom keyboard before.
 
 <img
-  src="/images/ergodox-inside.jpg"
+  src="ergodox-inside.jpg"
   alt="Inside the Ergodox EZ box">
   
 Installation and assembly was... well, there was none! I unpacked it and plugged it in. Buying prebuilt has benefits! I do have to admit, it's quite a strange feeling plugging an audio cable into your keyboard. Yep, that's an audio cable; It's not carrying audio though. It's how the keypresses from the left side make their way over to the right side, and into the USB interface.
 
 <img
-  src="/images/ergodox-initial-setup.jpg"
+  src="ergodox-initial-setup.jpg"
   alt="My ergodox, immedately after setup">
   
 You might notice that the key layout isn't *quite* the same as it was while it was still in the box. The stock Ergodox EZ layout is certainly... opinionated. The alphabet and numbers are pretty bog standard, but the stock thumb clusters are strange, and I just can't give up my asdf-row control key. ZSA, thankfully, are aware that not one size fits all and provide an [awesome, online configuration tool](https://configure.zsa.io/) which gives you a graphical interface to manipulate the keyboard layout. It'll even compile firmware packages for you, and they make flashing a breeze with their [wally](https://github.com/zsa/wally) tool.
@@ -63,7 +63,7 @@ I seriously can't sing enough praise for ZSA's software - the longer I use this 
 The only weak spot I can pinpoint is the process of putting the keyboard into programming mode. I can understand *why* they didn't do it, but there's no easy way to access the switch which resets the keyboard. There's a tiny hole at the top of the right-half of the keyboard, and wally suggests that a paperclip is used to reset the keyboard. Well, I'm not exactly in a 'real' office anymore, and my home office doesn't deal with paper all that often... so I had to get creative.
 
 <img
-  src="/images/ergodox-reset.jpg"
+  src="ergodox-reset.jpg"
   alt="Resetting my ergodox with a bread tie in the reset hole">
 
 > Yes, that's a bread tie. No, I'm not proud of it.

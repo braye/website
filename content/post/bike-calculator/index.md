@@ -12,7 +12,7 @@ images:
 ---
 
 <img
-  src="/images/bike-gearing/bike.jpg"
+  src="bike.jpg"
   alt="A picture of my green, single-speed road bike resting against a couple small bushes in my driveway.">
 
 For those who don't know, I really enjoy cycling. It's been really good to me, as a hobby - I stay fit, I get outside, and bikes themselves are a tinkerer's dream. Bikes have all the of the fun mechanical parts - bearings, gears, chains, and pulleys - while being relatively attainable and easy to deal with. I definitely consider myself a car enthusiast, but it's much more realistic for me to acquire a project *bike* than it is a project *car*.
@@ -48,7 +48,7 @@ For a mental shortcut, we can think of the Gain Ratio as the amount of effort re
 
 The site has a [calculator](https://www.sheldonbrown.com/gear-calc.html), but I found it finicky on modern Firefox. It's one of the parts of the old web that hasn't aged so gracefully. Naturally, I went and recreated it in a spreadsheet. Let's see what that looks like for the factory Topstone 4:
 
-<img src="/images/bike-gearing/topstone-stock.png">
+<img src="topstone-stock.png">
 
 The numbers clearly reflect what I've been feeling on the bike: the jump from the 2nd-smallest to smallest cog is a 15% hike in ratio! In fact, the whole cassette is really bad. The smallest jump is 12.5%.
 
@@ -64,13 +64,13 @@ Well, actually, you don't have to take my word for it. Now that we have our calc
 
 Here's the Shimano 105 11-30 tooth cassette off Cannondale's 2023 CAAD13 105, which has a 52/36 front chainring:
 
-<img src="/images/bike-gearing/caad13.png">
+<img src="caad13.png">
 
 The difference between the four smallest cogs are all under 9%. Significantly lower than the 15% of the stock Topstone!
 
 For giggles, let's swap a couple-generations-old Ultegra 12-30 cassette onto our Topstone.
 
-<img src="/images/bike-gearing/topstone-ultegra.png">
+<img src="topstone-ultegra.png">
 
 A pattern emerges, which represents a clear acknowledgement of the problem I've been experiencing. Honestly, just discovering this was really exciting! It's fun when you can validate mental models you've built, empirically. It's like debugging, but for bikes.
 

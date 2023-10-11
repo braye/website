@@ -9,7 +9,7 @@ images:
 ---
 
 <img
-  src="/images/wetlands.jpg"
+  src="wetlands.jpg"
   alt="A picture of some wetlands/a lake somewhere east of Seattle">
 
 Last fall, I moved across the country to live in the Seattle area. It's been great so far! Sure, most of what I've seen has been the winter months, but it's a welcome change from snowy old Michigan. 
@@ -58,7 +58,7 @@ Actually, you don't have to imagine. Here's a video:
 
 <video
   controls="true"
-  src="/videos/poe_lag.webm">
+  src="poe_lag.webm">
 
 I think it speaks for itself - It's the video-game equivalent of nails on a chalkboard. It strikes some deep, evolutionary nerve that causes physical pain.
 
@@ -86,7 +86,7 @@ This tool acts like a game, throwing UDP packets across the network relatively q
 Let's run it, and see what happens!
 
 <img
-  src="/images/bounceback-1.png"
+  src="bounceback-1.png"
   alt="The bounceback tool running on Linux, showing lots of jitter">
 
 ## :tada: I'm not crazy!!! :tada:
@@ -96,7 +96,7 @@ There **is** a problem on my local network! Even more interesting is how often i
 Awesome, we _know_ the problem is occurring, and now we can measure it. There's no clear cause, but let's start with eliminating some pieces of the stack. Thankfully, I wrote the tool in Go, so it's easy enough to bring it over to my Windows disk (on the same machine) and do some testing there.
 
 <img
-  src="/images/bounceback-2.png"
+  src="bounceback-2.png"
   alt="The bounceback tool running on Linux, showing lots of jitter">
 
 Well it's still happening, which is "good", I guess? It looks different though... there's a *lot* more packet disruptions, but they're significantly shorter. On the order of 20-30 milliseconds, rather than 100+. This probably explains why I wasn't having any issues with TeamSpeak on Windows - the interruptions weren't long enough to affect it. TeamSpeak's tolerance must lie somewhere between 40 and 100ms.
@@ -116,7 +116,7 @@ Let's eliminate the firmware from the equation! The state of Wi-Fi is such that 
 I cracked open my Chromebook and...
 
 <img
-  src="/images/wifi-oops.jpg"
+  src="wifi-oops.jpg"
   alt="A mini-coax connector for laptop Wi-Fi, missing the connector">
   
 Oops. 

@@ -16,7 +16,7 @@ images:
 _Note: This was originally split across three separate blog posts as more stream-of-consciousness type posts. I've condensed the original posts into one, with some minor revisions._
 
 <img
-  src="/images/3090-chonk.jpg"
+  src="3090-chonk.jpg"
   alt="the absolute lad that is the rtx 3090 FE">
 
 > This thing is as big as my 1st gen X1 Carbon!
@@ -32,7 +32,7 @@ Normally this would be an interesting footnote in a PCB analysis, but the 24 mem
 Let's take a look at how the card behaves in an "average" gaming build, running complete default setting with regards to clocks, power targets, and fan curves. I used 3DMark Port Royal's stress test mode to grab these results, and each run was after a cold boot where the computer had been completely unpowered for \~30 minutes beforehand. I ran the card through 5 loops of the stress test mode, and then took a screenshot of HWinfo64 to grab the highest recorded temperatures. [^2]
 
 <img
-  src="/images/3090-hwinfo-stock.png"
+  src="3090-hwinfo-stock.png"
   alt="HWinfo64 data for a stock 3090 showing poor memory temperatures">
 
 > Notice the third column, third row: 102 degrees Celsius. This is the T<sub>j</sub> of the hottest memory chip on the board. 
@@ -68,7 +68,7 @@ The modern method by which we overclock NVidia cards was introduced in the GTX 6
 With the release of the GTX 10 series cards in 2016, "GPU Boost" reached a state that is more or less the same as it exists today. Called "GPU Boost 3.0", the system would opportunistically push the limits of the GPU as long as certain conditions were met. One *very important* change was made, though: Users now had the ability to define a custom relationship between the GPU core's voltage, and the core's frequency. In essence, you end up with a graph like this:  
 
 <img
-  src="/images/msi-afterburner-vf-curve.png"
+  src="msi-afterburner-vf-curve.png"
   alt="A screenshot of a voltage-frequency curve in MSI Afterburner">
 
 > [Source](https://www.reddit.com/r/overclocking/comments/7yjiwn/does_voltage_curve_also_benefit_memory_clock_msi/) on Reddit's r/overclocking
@@ -100,7 +100,7 @@ Until recently, Nvidia's first-party cards sported a "blower" design, using a pa
 The release of the RTX 2000 series in 2018 showed Nvidia's first attempts to move on from this tired design. The thermal solution included on "Founders Edition" cards, as they were now branded, weren't outstanding but still represented a large upgrade over the old design. They were dual-fan, transverse-exit cards which utilized a large vapor chamber to spread heat across the heatsink. Two fans would then push air down onto the heatsink, and it would then exit the open sides of the card into the computer case. Large vapor chambers aren't the most efficient method of moving heat over a long distance, but they strike a good compromise between low cost and thermal performance. AMD recently used a similar design on their first-party Radeon 6800 series cards to fairly decent effect.
 
 <img
-  src="/images/2080-fe-vapor-chamber.jpg"
+  src="2080-fe-vapor-chamber.jpg"
   alt="A GeForce RTX 2080 Founder's Edition GPU, without its fan shroud">
   
 > An RTX 2080 FE, minus the fan shroud.
@@ -108,7 +108,7 @@ The release of the RTX 2000 series in 2018 showed Nvidia's first attempts to mov
 The RTX 3000 series, on the other hand, debuted with a radical departure from the previous 20 series design. Nvidia's election to push TDPs even higher, and the limited space in which to dissipate that heat, led them to create a frankenstein-like marriage of the old "blower" concept and a more recent aftermarket trend known as "blow-through" coolers. Maybe it's for the best if I let Nvidia's marketing material explain:
 
 <img
-  src="/images/rtx-30-series-flow.jpg"
+  src="rtx-30-series-flow.jpg"
   alt="A GeForce RTX 2080 Founder's Edition GPU, without its fan shroud">
   
 The case-forward half of the card has a fan that's embedded on the "top" side of the heatsink, and spins to pull air *through* the heatpipes and fins below it. The case-rearward part of the card has a fan on the "bottom" of the heatsink, sucking up air and expelling it out the rear of the case through a stack of fins.
@@ -122,7 +122,7 @@ I'm not exactly convinced that this is better than what's available from other m
 The awkward implementation of a "blow-through" design also necessitates putting all the heat-generating parts of the PCB very close to one another. Here's a picture of a 3090 FE PCB - notice the borderline comical level of component density.
 
 <img
-  src="/images/3090-fe-pcb.jpg"
+  src="3090-fe-pcb.jpg"
   alt="A GeForce RTX 3090 Founder's Edition PCB">
 
 Keep in mind that all of those power stages, all those RAM ICs, the voltage management ICs... all of that together is the 350 Watt figure we're dealing with when we refer to the card's TDP. There's little doubt that the heatsink has the thermal *mass* to deal with a 350 Watt heat load[^7], but that's only one part of the equation. Much like electricity, every time a connection needs to be made between two materials, there is some thermal resistance. Thermal paste and pads help to fill in the physical gaps, but they're no substitute for having less thermal interfaces. In the RTX 3090's instance, most of the components on the front side of the interface go through 3 thermal interfaces:
@@ -144,7 +144,7 @@ First off, we can't lower the heat load via V/F underclocking, *because Nvidia*.
 The first real solution I explored was just sticking some heatsinks on the back of the GPU. Why not? It wouldn't even require digging my Torx drivers from wherever they reside in the depths of my toolbox. Of course, one quick look at my computer and those hopes were dashed:
 
 <img
-  src="/images/3090-no-space.jpg"
+  src="3090-no-space.jpg"
   alt="A GeForce RTX 3090 Founder's Edition PCB">
   
 Oops. Turns out I forgot that there was approximately half a millimeter between the back of my GPU, and the heatsink-fan assembly for my CPU. That's gonna be a no-go. It's worth noting that Many People On The Internet claim to have success with this method - although every time I found a photo from said person, they were running a closed-loop liquid cooler for their CPU. That's actually where my mind went next - it would have been a decent upgrade in cooling capacity for my CPU, but I wasn't exactly running into limitations there. Ultimately, it would have mostly been wasted money.
@@ -156,7 +156,7 @@ I ended up purchasing Gelid 2.0mm thermal pads. Dubious W/mK claims aside, they 
 Upon liberating my Torx drivers from their dusty prison, I was greeted with the maze of passives and ICs that I expected:
 
 <img
-  src="/images/3090-teardown-1.jpg"
+  src="3090-teardown-1.jpg"
   alt="My GeForce RTX 3090 Founder's Edition PCB">
   
 Obnoxiously enough, the backplate requires Torx *and* Phillips drivers to remove. If you're taking score, put another mark in the "Why, Nvidia, Why?" column.
@@ -164,13 +164,13 @@ Obnoxiously enough, the backplate requires Torx *and* Phillips drivers to remove
 Looking closer, though, I immediately noticed a problem: a couple of the thermal pads evidently weren't making full contact with the RAM ICs! See those blank spots where the stock thermal pads weren't touching? Here's a closer look:
 
 <img
-  src="/images/3090-teardown-3.jpg"
+  src="3090-teardown-3.jpg"
   alt="My GeForce RTX 3090 Founder's Edition PCB">
   
 I don't really think this made that big of a difference, over all. It certainly wasn't pleasing to find, though. Looking closer at the thermal pads, it certainly looks like they were applied by hand, and weirdly enough not in pre-cut groups?
 
 <img
-  src="/images/3090-teardown-2.jpg"
+  src="3090-teardown-2.jpg"
   alt="My GeForce RTX 3090 Founder's Edition thermal pads on the backplate">
   
 The section on top is pretty egregiously out of alignment, and it looks like they come in groups of two, but not always? The ones on the left are half-cut. I don't want to rag on what are likely horrifically underpaid factory workers too harshly, but you'd think that an assembly line running RTX 3090s would at least have pre-sized pads for the coolers. It's probably not worth the extra prep time and logistics, I guess.
@@ -178,7 +178,7 @@ The section on top is pretty egregiously out of alignment, and it looks like the
 There was also this weird thermal pad going to seemingly nowhere? I only noticed this after I started replacing some of the pads.
 
 <img
-  src="/images/3090-teardown-4.jpg"
+  src="3090-teardown-4.jpg"
   alt="My GeForce RTX 3090 Founder's Edition PCB, showing a thermal pad contacting an unpopulated spot">
 
 It looks like it was meant to make contact with some 8-pin IC which was removed from the final design. For reference, this card was purchased in January of 2021, so it was by no means a super early production run or pre-production sample.
@@ -186,13 +186,13 @@ It looks like it was meant to make contact with some 8-pin IC which was removed 
 The stock thermal pads are also significantly different than the ones I purchased after-market. They're this weird, almost fabric-like material.
 
 <img
-  src="/images/3090-thermal-pad.jpg"
+  src="3090-thermal-pad.jpg"
   alt="My GeForce RTX 3090 Founder's Edition's stock thermal pads">
 
 I have to imagine this makes them significantly easier to handle. These really did feel like a fabric, rather than a loosely stuck-together pile of weird sludge like my Gelid pads did. Speaking of those pads, I quickly grabbed my scissors and got to work cutting out the appropriate sizes and placements:
 
 <img
-  src="/images/3090-repad-finished.jpg"
+  src="3090-repad-finished.jpg"
   alt="My GeForce RTX 3090 Founder's Edition, with new thermal pads">
   
 I elected to leave the rows of stock pads, meant to sink heat from the power delivery circuitry on the front side of the board, in place. Frankly, I doubt their effect is make-or-break on the thermals for those ICs. Power stages are generally good into the triple digits. I suppose I could look up the data sheet if I really wanted, but I don't plan on pushing the power on this card significantly beyond stock. Maybe I'll regret that in a couple years, who knows.
@@ -204,13 +204,13 @@ Overall, the installation was fairly un-eventful. The card went back together ea
 As a reminder, here are the pre-modification results:
 
 <img
-  src="/images/3090-hwinfo-stock.png"
+  src="3090-hwinfo-stock.png"
   alt="HWinfo64 data for a stock 3090 showing poor memory temperatures">
 
 Not pretty. The mod, however, yields a different story. As a reminder, this was after 5 loops of 3DMark Port Royal's stress test mode, at completely stock settings.
 
 <img
-  src="/images/3090-hwinfo-modified.png"
+  src="3090-hwinfo-modified.png"
   alt="HWinfo64 data for a stock 3090 showing much improved memory temperatures">
 
 ### MUCH better!
@@ -220,12 +220,12 @@ The hottest memory T<sub>j</sub> dropped by 12 degrees! This was an awesome impr
 Pre-Mod:
 <video
   controls="true"
-  src="/videos/3090-pre-mod.mov">
+  src="3090-pre-mod.mov">
   
 Post-Mod:
 <video
   controls="true"
-  src="/videos/3090-post-mod.mov">
+  src="3090-post-mod.mov">
   
   
 The card has *horrendous* coil whine, so it still sounds like a taser every time I run a heavy benchmark, but I can barely hear that noise once I have my headphones on.
