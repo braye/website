@@ -62,7 +62,7 @@ Finally, the nature of public IPv4 addresses (we don't have enough) also means t
 
 Clearly, a better solution would lie somewhere in the middle. I think I've found it.
 
-My setup uses a [Caddy](https://caddyserver.com) reverse proxy running on a Hetzner VM. On a spare computer at home, there are a couple virtual machines running the applications I want to expose to the internet. The reverse proxy VM and the virtual machines are connected to a VPN using [Tailscale](https://tailscale.com/).
+My setup uses a [Caddy](https://caddyserver.com) reverse proxy running on a Hetzner VM. On a spare computer at home, there are a couple virtual machines running the applications I want to expose to the internet. The reverse proxy VM and the virtual machines are connected to a VPN using [Tailscale](https://tailscale.com/). The domains of the applications I host all resolve to the same Hetzner VM, and Caddy will forward that traffic to the appropriate self-hosted VM based on the `Host:` header it receives.
 
 Using Tailscale solves a very important problem: the connection between the reverse proxy VM and the computers on my home network is now totally agnostic of the public IP address of my home LAN. This solves the networking problem, while the Hetzner VM solves the privacy problem. As a bonus, I also don't have to play around with firewall configuration on my home network!
 
